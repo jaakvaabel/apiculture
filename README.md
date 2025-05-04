@@ -1,10 +1,10 @@
 # Apiculture
 
-**Apiculture** is a software consultancy that merges clean API design with a culture of maintainability and scalability—sprinkled with some beekeeping inspiration.
+**Apiculture AS** is a software consultancy that merges clean API design with a culture of maintainability and scalability—sprinkled with some beekeeping inspiration.
 
 ## Website Preview
 
-Live site: https://jaakvaabel.github.io/apiculture-site/
+Live site: https://jaakvaabel.github.io/apiculture
 
 ## About
 
