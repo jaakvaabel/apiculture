@@ -11,9 +11,10 @@
     header { background: #f8d24e; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
     nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: 600; transition: color 0.3s; }
     nav a:hover { color: #555; }
-    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; background: linear-gradient(#fbe796, #fff3b0); }
-    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; animation: fadeInDown 1s ease-out; }
-    .hero p { font-size: 1.2rem; margin-bottom: 2rem; animation: fadeInUp 1s ease-out; }
+    .hero { display: flex; flex-direction: column; align-items: center; text-align: center; padding: 4rem 2rem; background: linear-gradient(#fbe796, #fff3b0); }
+    .hero img { width: 300px; margin-bottom: 2rem; }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; }
     .btn { background: #333; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; transition: background 0.3s; }
     .btn:hover { background: #555; }
     section { padding: 4rem 2rem; position: relative; }
@@ -22,25 +23,9 @@
     .services, .projects { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
     .card { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 300px; text-align: center; transition: transform 0.3s; }
     .card:hover { transform: translateY(-5px); }
+    .hex-pattern { background-image: url('assets/hex-bg.svg'); background-size: contain; background-repeat: repeat-y; opacity: 0.05; position: absolute; width: 100%; height: 100%; top: 0; z-index: 0; }
     footer { background: #f8d24e; padding: 2rem; text-align: center; font-size: 0.9rem; }
-    .hex-path { position: absolute; left: 50%; transform: translateX(-50%); height: 100%; width: 50px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="200" viewBox="0 0 100 200"><path fill="none" stroke="%23333" stroke-width="5" d="M50 0 l25 43 -25 43 -25 -43z"/></svg>'); background-repeat: repeat-y; opacity: 0.1; }
     form input, form textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px; }
-    form button { align-self: flex-start; }
-
-    @keyframes fadeInDown {
-      from { opacity: 0; transform: translateY(-20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-    @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-
-    @media (max-width: 768px) {
-      header { flex-direction: column; align-items: flex-start; }
-      nav a { margin: 0.5rem 0; }
-      .services, .projects { flex-direction: column; align-items: center; }
-    }
   </style>
 </head>
 <body>
@@ -57,13 +42,14 @@
 
   <main>
     <section class="hero" id="home">
+      <img src="assets/beekeeper-server.svg" alt="Beekeeper with server" />
       <h1>Where great APIs and great culture meet.</h1>
       <p>Software consultancy with a twist of nature.</p>
       <a href="#contact" class="btn">Start a Project</a>
     </section>
 
     <section class="section-bg" id="about">
-      <div class="hex-path"></div>
+      <div class="hex-pattern"></div>
       <h2>About Apiculture</h2>
       <p style="max-width: 600px; margin: auto;">Apiculture is a software consultancy focused on building clean, scalable, and maintainable APIs. Just like bees working in harmony, we bring structure and reliability to software design—with a nod to the natural world.</p>
     </section>
@@ -91,7 +77,7 @@
     </section>
 
     <section class="section-bg" id="portfolio">
-      <div class="hex-path"></div>
+      <div class="hex-pattern"></div>
       <h2>Projects We've Pollinated</h2>
       <div class="projects">
         <div class="card">
