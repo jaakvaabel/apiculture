@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Apiculture - Software Consultancy</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Inter', sans-serif; line-height: 1.6; background: #fef9e7; color: #333; }
+    header { background: #f8d24e; padding: 1rem 2rem; position: sticky; top: 0; z-index: 1000; display: flex; justify-content: space-between; align-items: center; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+    nav a { margin-left: 1.5rem; text-decoration: none; color: #333; font-weight: 600; transition: color 0.3s; }
+    nav a:hover { color: #555; }
+    .hero { display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; padding: 4rem 2rem; background: linear-gradient(#fbe796, #fff3b0); }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; animation: fadeInDown 1s ease-out; }
+    .hero p { font-size: 1.2rem; margin-bottom: 2rem; animation: fadeInUp 1s ease-out; }
+    .btn { background: #333; color: #fff; padding: 0.75rem 1.5rem; border: none; border-radius: 5px; cursor: pointer; text-decoration: none; transition: background 0.3s; }
+    .btn:hover { background: #555; }
+    section { padding: 4rem 2rem; position: relative; }
+    .section-bg { background: #fffbee; clip-path: polygon(0 5%, 100% 0%, 100% 95%, 0% 100%); }
+    h2 { font-size: 2rem; margin-bottom: 1.5rem; text-align: center; }
+    .services, .projects { display: flex; flex-wrap: wrap; gap: 1.5rem; justify-content: center; }
+    .card { background: #fff; padding: 2rem; border-radius: 12px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); max-width: 300px; text-align: center; transition: transform 0.3s; }
+    .card:hover { transform: translateY(-5px); }
+    footer { background: #f8d24e; padding: 2rem; text-align: center; font-size: 0.9rem; }
+    .hex-path { position: absolute; left: 50%; transform: translateX(-50%); height: 100%; width: 50px; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="200" viewBox="0 0 100 200"><path fill="none" stroke="%23333" stroke-width="5" d="M50 0 l25 43 -25 43 -25 -43z"/></svg>'); background-repeat: repeat-y; opacity: 0.1; }
+    form input, form textarea { width: 100%; padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px; }
+    form button { align-self: flex-start; }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @media (max-width: 768px) {
+      header { flex-direction: column; align-items: flex-start; }
+      nav a { margin: 0.5rem 0; }
+      .services, .projects { flex-direction: column; align-items: center; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div><strong>Apiculture</strong></div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Services</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <h1>Where great APIs and great culture meet.</h1>
+      <p>Software consultancy with a twist of nature.</p>
+      <a href="#contact" class="btn">Start a Project</a>
+    </section>
+
+    <section class="section-bg" id="about">
+      <div class="hex-path"></div>
+      <h2>About Apiculture</h2>
+      <p style="max-width: 600px; margin: auto;">Apiculture is a software consultancy focused on building clean, scalable, and maintainable APIs. Just like bees working in harmony, we bring structure and reliability to software design—with a nod to the natural world.</p>
+    </section>
+
+    <section id="services">
+      <h2>Our Services</h2>
+      <div class="services">
+        <div class="card">
+          <h3>API Design & Strategy</h3>
+          <p>Well-structured and future-proof interfaces for scalable systems.</p>
+        </div>
+        <div class="card">
+          <h3>Backend Engineering</h3>
+          <p>Resilient services using modern backend technologies.</p>
+        </div>
+        <div class="card">
+          <h3>DevOps & Infrastructure</h3>
+          <p>Automation and observability to support growing systems.</p>
+        </div>
+        <div class="card">
+          <h3>Team Augmentation</h3>
+          <p>Join your team and help deliver clean and scalable code.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-bg" id="portfolio">
+      <div class="hex-path"></div>
+      <h2>Projects We've Pollinated</h2>
+      <div class="projects">
+        <div class="card">
+          <h3>HiveSync</h3>
+          <p>Data sync platform for distributed teams.</p>
+        </div>
+        <div class="card">
+          <h3>NectarAPI</h3>
+          <p>Robust API gateway for microservices.</p>
+        </div>
+        <div class="card">
+          <h3>ColonyStack</h3>
+          <p>Infrastructure-as-code for startups and scaleups.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <h2>Let’s Build Something Sweet</h2>
+      <form style="max-width: 500px; margin: auto; display: flex; flex-direction: column; gap: 1rem;">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea rows="5" placeholder="Your Message" required></textarea>
+        <button class="btn" type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 Apiculture. Crafted with code & care.
+  </footer>
+</body>
+</html>
